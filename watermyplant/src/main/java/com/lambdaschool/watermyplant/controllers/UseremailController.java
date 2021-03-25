@@ -1,7 +1,7 @@
-package com.lambdaschool.foundation.controllers;
+package com.lambdaschool.watermyplant.controllers;
 
-import com.lambdaschool.foundation.models.Useremail;
-import com.lambdaschool.foundation.services.UseremailService;
+import com.lambdaschool.watermyplant.models.Useremail;
+import com.lambdaschool.watermyplant.services.UseremailService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;

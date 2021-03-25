@@ -1,6 +1,6 @@
-package com.lambdaschool.foundation.services;
+package com.lambdaschool.watermyplant.services;
 
-import com.lambdaschool.foundation.models.Role;
+import com.lambdaschool.watermyplant.models.Role;
 
 import java.util.List;
 

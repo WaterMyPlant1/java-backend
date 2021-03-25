@@ -1,10 +1,10 @@
-package com.lambdaschool.foundation.controllers;
+package com.lambdaschool.watermyplant.controllers;
 
-import com.lambdaschool.foundation.models.User;
-import com.lambdaschool.foundation.models.UserMinimum;
-import com.lambdaschool.foundation.models.UserRoles;
-import com.lambdaschool.foundation.services.RoleService;
-import com.lambdaschool.foundation.services.UserService;
+import com.lambdaschool.watermyplant.models.User;
+import com.lambdaschool.watermyplant.models.UserMinimum;
+import com.lambdaschool.watermyplant.models.UserRoles;
+import com.lambdaschool.watermyplant.services.RoleService;
+import com.lambdaschool.watermyplant.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.*;
 import org.springframework.util.LinkedMultiValueMap;

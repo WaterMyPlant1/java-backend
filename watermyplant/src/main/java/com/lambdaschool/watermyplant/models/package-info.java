@@ -4,4 +4,4 @@
  *
  * @author John Mitchell (john@lambdaschool.com) with Lambda School unless otherwise noted.
  */
-package com.lambdaschool.foundation.models;
+package com.lambdaschool.watermyplant.models;

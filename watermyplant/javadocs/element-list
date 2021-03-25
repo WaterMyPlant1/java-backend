@@ -1,0 +1,8 @@
+com.lambdaschool.watermyplant
+com.lambdaschool.watermyplant.config
+com.lambdaschool.watermyplant.controllers
+com.lambdaschool.watermyplant.exceptions
+com.lambdaschool.watermyplant.handlers
+com.lambdaschool.watermyplant.models
+com.lambdaschool.watermyplant.repository
+com.lambdaschool.watermyplant.services

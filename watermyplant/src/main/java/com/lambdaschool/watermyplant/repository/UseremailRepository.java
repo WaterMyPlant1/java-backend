@@ -1,6 +1,6 @@
-package com.lambdaschool.foundation.repository;
+package com.lambdaschool.watermyplant.repository;
 
-import com.lambdaschool.foundation.models.Useremail;
+import com.lambdaschool.watermyplant.models.Useremail;
 import org.springframework.data.repository.CrudRepository;
 
 /**

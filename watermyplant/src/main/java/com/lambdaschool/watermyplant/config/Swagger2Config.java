@@ -1,4 +1,4 @@
-package com.lambdaschool.foundation.config;
+package com.lambdaschool.watermyplant.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

@@ -1,14 +1,14 @@
-package com.lambdaschool.foundation;
+package com.lambdaschool.watermyplant;
 
 import com.github.javafaker.Faker;
 import com.github.javafaker.service.FakeValuesService;
 import com.github.javafaker.service.RandomService;
-import com.lambdaschool.foundation.models.Role;
-import com.lambdaschool.foundation.models.User;
-import com.lambdaschool.foundation.models.UserRoles;
-import com.lambdaschool.foundation.models.Useremail;
-import com.lambdaschool.foundation.services.RoleService;
-import com.lambdaschool.foundation.services.UserService;
+import com.lambdaschool.watermyplant.models.Role;
+import com.lambdaschool.watermyplant.models.User;
+import com.lambdaschool.watermyplant.models.UserRoles;
+import com.lambdaschool.watermyplant.models.Useremail;
+import com.lambdaschool.watermyplant.services.RoleService;
+import com.lambdaschool.watermyplant.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;

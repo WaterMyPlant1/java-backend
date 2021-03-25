@@ -1,6 +1,6 @@
-package com.lambdaschool.foundation.repository;
+package com.lambdaschool.watermyplant.repository;
 
-import com.lambdaschool.foundation.models.Role;
+import com.lambdaschool.watermyplant.models.Role;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;

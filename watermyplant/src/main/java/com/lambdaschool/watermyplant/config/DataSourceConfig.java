@@ -1,4 +1,4 @@
-package com.lambdaschool.foundation.config;
+package com.lambdaschool.watermyplant.config;
 
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;

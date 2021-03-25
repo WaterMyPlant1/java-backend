@@ -1,7 +1,7 @@
-package com.lambdaschool.foundation.controllers;
+package com.lambdaschool.watermyplant.controllers;
 
-import com.lambdaschool.foundation.models.Role;
-import com.lambdaschool.foundation.services.RoleService;
+import com.lambdaschool.watermyplant.models.Role;
+import com.lambdaschool.watermyplant.services.RoleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;

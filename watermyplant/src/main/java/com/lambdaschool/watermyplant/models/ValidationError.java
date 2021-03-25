@@ -1,4 +1,4 @@
-package com.lambdaschool.foundation.models;
+package com.lambdaschool.watermyplant.models;
 
 /**
  * A model to report a validation error

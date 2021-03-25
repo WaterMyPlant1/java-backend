@@ -1,7 +1,7 @@
-package com.lambdaschool.foundation.exceptions;
+package com.lambdaschool.watermyplant.exceptions;
 
 
-import com.lambdaschool.foundation.services.HelperFunctions;
+import com.lambdaschool.watermyplant.services.HelperFunctions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.web.servlet.error.DefaultErrorAttributes;
 import org.springframework.stereotype.Component;

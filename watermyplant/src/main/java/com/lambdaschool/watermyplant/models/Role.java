@@ -1,4 +1,4 @@
-package com.lambdaschool.foundation.models;
+package com.lambdaschool.watermyplant.models;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 

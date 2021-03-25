@@ -1,6 +1,6 @@
-package com.lambdaschool.foundation.services;
+package com.lambdaschool.watermyplant.services;
 
-import com.lambdaschool.foundation.models.ValidationError;
+import com.lambdaschool.watermyplant.models.ValidationError;
 
 import java.util.List;
 

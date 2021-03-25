@@ -1,11 +1,11 @@
-package com.lambdaschool.foundation.services;
+package com.lambdaschool.watermyplant.services;
 
-import com.lambdaschool.foundation.exceptions.ResourceNotFoundException;
-import com.lambdaschool.foundation.models.Role;
-import com.lambdaschool.foundation.models.User;
-import com.lambdaschool.foundation.models.UserRoles;
-import com.lambdaschool.foundation.models.Useremail;
-import com.lambdaschool.foundation.repository.UserRepository;
+import com.lambdaschool.watermyplant.exceptions.ResourceNotFoundException;
+import com.lambdaschool.watermyplant.models.Role;
+import com.lambdaschool.watermyplant.models.User;
+import com.lambdaschool.watermyplant.models.UserRoles;
+import com.lambdaschool.watermyplant.models.Useremail;
+import com.lambdaschool.watermyplant.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.oauth2.client.resource.OAuth2AccessDeniedException;
 import org.springframework.stereotype.Service;

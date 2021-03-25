@@ -1,4 +1,4 @@
-package com.lambdaschool.foundation;
+package com.lambdaschool.watermyplant;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
