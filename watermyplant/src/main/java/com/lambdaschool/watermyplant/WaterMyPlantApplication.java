@@ -12,8 +12,8 @@ import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
  */
 @EnableJpaAuditing
 @SpringBootApplication
-@PropertySource(value = "file:/Users/lambdajohn/foundationconf.properties", ignoreResourceNotFound = true)
-public class FoundationApplication
+@PropertySource(value = "file:/Users/shazeenfabius/watermyplant.properties", ignoreResourceNotFound = true)
+public class WaterMyPlantApplication
 {
     /**
      * Connect to the system environment where environment variables live.
@@ -53,7 +53,7 @@ public class FoundationApplication
 
         if (!stop)
         {
-            SpringApplication.run(FoundationApplication.class,
+            SpringApplication.run(WaterMyPlantApplication.class,
                 args);
         } else
         {

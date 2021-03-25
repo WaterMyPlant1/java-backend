@@ -1,6 +1,6 @@
 package com.lambdaschool.watermyplant.services;
 
-import com.lambdaschool.watermyplant.FoundationApplicationTesting;
+import com.lambdaschool.watermyplant.WaterMyPlantApplicationTesting;
 import com.lambdaschool.watermyplant.exceptions.ResourceNotFoundException;
 import com.lambdaschool.watermyplant.models.Role;
 import com.lambdaschool.watermyplant.models.User;
@@ -26,7 +26,7 @@ import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.anyString;
 
 @RunWith(SpringRunner.class)
-@SpringBootTest(classes = FoundationApplicationTesting.class,
+@SpringBootTest(classes = WaterMyPlantApplicationTesting.class,
     properties = {
         "command.line.runner.enabled=false"})
 public class UserServiceImplNoDBTest

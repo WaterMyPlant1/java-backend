@@ -1,7 +1,7 @@
 package com.lambdaschool.watermyplant.controllers;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.lambdaschool.watermyplant.FoundationApplicationTesting;
+import com.lambdaschool.watermyplant.WaterMyPlantApplicationTesting;
 import com.lambdaschool.watermyplant.models.Role;
 import com.lambdaschool.watermyplant.models.User;
 import com.lambdaschool.watermyplant.models.UserRoles;
@@ -45,7 +45,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @WithMockUser(username = "admin",
     roles = {"USER", "ADMIN"})
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT,
-    classes = FoundationApplicationTesting.class,
+    classes = WaterMyPlantApplicationTesting.class,
     properties = {
         "command.line.runner.enabled=false"})
 @AutoConfigureMockMvc

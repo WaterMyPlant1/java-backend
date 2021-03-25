@@ -1,6 +1,6 @@
 package com.lambdaschool.watermyplant.services;
 
-import com.lambdaschool.watermyplant.FoundationApplicationTesting;
+import com.lambdaschool.watermyplant.WaterMyPlantApplicationTesting;
 import com.lambdaschool.watermyplant.exceptions.ResourceNotFoundException;
 import com.lambdaschool.watermyplant.models.Role;
 import com.lambdaschool.watermyplant.models.User;
@@ -23,7 +23,7 @@ import static junit.framework.TestCase.assertEquals;
 import static org.mockito.ArgumentMatchers.anyString;
 
 @RunWith(SpringRunner.class)
-@SpringBootTest(classes = FoundationApplicationTesting.class)
+@SpringBootTest(classes = WaterMyPlantApplicationTesting.class)
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class UserServiceImplWithDBTest
 {

@@ -1,6 +1,6 @@
 package com.lambdaschool.watermyplant.controllers;
 
-import com.lambdaschool.watermyplant.FoundationApplicationTesting;
+import com.lambdaschool.watermyplant.WaterMyPlantApplicationTesting;
 import io.restassured.module.mockmvc.RestAssuredMockMvc;
 import org.junit.After;
 import org.junit.Before;
@@ -29,7 +29,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @RunWith(SpringRunner.class)
 @WithUserDetails("admin")
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT,
-    classes = FoundationApplicationTesting.class)
+    classes = WaterMyPlantApplicationTesting.class)
 @AutoConfigureMockMvc
 public class UserControllerIntegrationTest
 {
