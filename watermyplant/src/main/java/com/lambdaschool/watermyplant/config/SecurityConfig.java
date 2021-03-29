@@ -64,6 +64,8 @@ public class SecurityConfig
     /**
      * We will store our token in memory. This way when the application exists all access tokens are invalidated.
      *
+     * AuthorizationServerConfig (autowired)
+     *
      * @return A token store configured to be used in memory
      */
     @Bean

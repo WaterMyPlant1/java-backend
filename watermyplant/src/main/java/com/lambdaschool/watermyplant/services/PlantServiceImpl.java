@@ -25,7 +25,7 @@ public class PlantServiceImpl implements PlantService
     @Override
     public List<Plant> findPlantByUserId(long userid)
     {
-        List<Plant> plantList = plantRepository.findPlantByUser(userid);
+        List<Plant> plantList = plantRepository.findPlantByUser_userid(userid);
 
         return plantList;
     }

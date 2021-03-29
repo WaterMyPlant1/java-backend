@@ -62,6 +62,8 @@ public class ResourceServerConfig
             .antMatchers(HttpMethod.PUT,
                 "/users/**")
             .hasAnyRole("ADMIN")
+            .antMatchers(HttpMethod.PATCH, "/users/**")
+            .hasAnyRole("ADMIN")
             .antMatchers("/users/**",
                 "/useremails/**",
                 "/oauth/revoke-token",
@@ -69,6 +71,9 @@ public class ResourceServerConfig
             .authenticated()
             .antMatchers("/roles/**")
             .hasAnyRole("ADMIN")
+            //only users that are logged in have access to plants ends points
+            .antMatchers("/plants/**")
+            .authenticated()
             .anyRequest()
             .denyAll()
             .and()

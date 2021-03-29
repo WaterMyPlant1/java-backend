@@ -97,6 +97,7 @@ public class UserServiceImpl
 
         newUser.setUsername(user.getUsername()
             .toLowerCase());
+        //password is already encrypted by the time we reach this code
         newUser.setPasswordNoEncrypt(user.getPassword());
         newUser.setPhoneNumber(user.getPhoneNumber());
 
@@ -148,6 +149,7 @@ public class UserServiceImpl
 
             if (user.getPassword() != null)
             {
+                //password is already encrypted by the time we reach this code
                 currentUser.setPasswordNoEncrypt(user.getPassword());
             }
 

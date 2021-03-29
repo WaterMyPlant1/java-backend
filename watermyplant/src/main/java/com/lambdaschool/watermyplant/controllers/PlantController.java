@@ -23,7 +23,7 @@ public class PlantController
     @GetMapping(value = "/{userId}",
         produces = {"application/json"})
     public ResponseEntity<?> getAllPlantsByUserId(
-        @PathVariable Long userId
+        @PathVariable long userId
     )
     {
         List<Plant> p = plantService.findPlantByUserId(userId);

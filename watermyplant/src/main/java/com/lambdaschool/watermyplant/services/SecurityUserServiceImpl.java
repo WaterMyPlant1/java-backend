@@ -15,6 +15,7 @@ import org.springframework.transaction.annotation.Transactional;
 /**
  * This implements User Details Service that allows us to authenticate a user.
  */
+@Transactional
 @Service(value = "securityUserService")
 public class SecurityUserServiceImpl
     implements UserDetailsService
