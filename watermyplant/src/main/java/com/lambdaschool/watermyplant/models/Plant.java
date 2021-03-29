@@ -7,7 +7,7 @@ import java.util.Date;
 
 @Entity
 @Table(name = "plants")
-public class Plants extends Auditable
+public class Plant extends Auditable
 {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -24,11 +24,11 @@ public class Plants extends Auditable
     @JsonIgnoreProperties(value = "plant", allowSetters = true)
     private User user;
 
-    public Plants()
+    public Plant()
     {
     }
 
-    public Plants(
+    public Plant(
         String nickname,
         String species,
         Date h2oFrequency)
@@ -38,7 +38,7 @@ public class Plants extends Auditable
         this.h2oFrequency = h2oFrequency;
     }
 
-    public Plants(
+    public Plant(
         long plantId,
         String nickname,
         String species,
