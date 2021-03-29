@@ -1,10 +1,7 @@
 package com.lambdaschool.watermyplant.services;
 
 import com.lambdaschool.watermyplant.exceptions.ResourceNotFoundException;
-import com.lambdaschool.watermyplant.models.Role;
-import com.lambdaschool.watermyplant.models.User;
-import com.lambdaschool.watermyplant.models.UserRoles;
-import com.lambdaschool.watermyplant.models.Useremail;
+import com.lambdaschool.watermyplant.models.*;
 import com.lambdaschool.watermyplant.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.oauth2.client.resource.OAuth2AccessDeniedException;
@@ -101,8 +98,7 @@ public class UserServiceImpl
         newUser.setUsername(user.getUsername()
             .toLowerCase());
         newUser.setPasswordNoEncrypt(user.getPassword());
-        newUser.setPrimaryemail(user.getPrimaryemail()
-            .toLowerCase());
+        newUser.setPhoneNumber(user.getPhoneNumber());
 
         newUser.getRoles()
             .clear();
@@ -122,6 +118,13 @@ public class UserServiceImpl
             newUser.getUseremails()
                 .add(new Useremail(newUser,
                     ue.getUseremail()));
+        }
+
+        newUser.getPlants().clear();
+        for(Plant p : user.getPlants())
+        {
+            newUser.getPlants()
+                .add(new Plant(p.getNickname(), p.getSpecies(), p.getH2oFrequency(), newUser));
         }
 
         return userrepos.save(newUser);
@@ -146,6 +149,11 @@ public class UserServiceImpl
             if (user.getPassword() != null)
             {
                 currentUser.setPasswordNoEncrypt(user.getPassword());
+            }
+
+            if(user.getPhoneNumber() != null)
+            {
+                currentUser.setPhoneNumber(user.getPhoneNumber());
             }
 
             if (user.getPrimaryemail() != null)

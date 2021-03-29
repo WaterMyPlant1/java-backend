@@ -6,9 +6,11 @@ import java.util.List;
 
 public interface PlantService
 {
-    List<Plant> findAll();
+    List<Plant> findPlantByUserId(long userid);
 
-    List<Plant> findAllByUserId(long userId);
+    Plant save(Plant plant);
 
-    Plant findPlantById(long plantId);
+    Plant update(Plant plant, long id);
+
+    void delete(long id);
 }

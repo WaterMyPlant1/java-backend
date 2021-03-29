@@ -45,10 +45,14 @@ public class User
     /**
      * Primary email account of user. Could be used as the userid. Cannot be null and must be unique.
      */
-    @Column(nullable = false,
+    @Column(nullable = true,
         unique = true)
     @Email
     private String primaryemail;
+
+    @Column(nullable = false,
+    unique = true)
+    private String phoneNumber;
 
     /**
      * A list of emails for this user
@@ -71,6 +75,13 @@ public class User
         allowSetters = true)
     private Set<UserRoles> roles = new HashSet<>();
 
+    @OneToMany(mappedBy = "user",
+        cascade = CascadeType.ALL,
+        orphanRemoval = true)
+    @JsonIgnoreProperties(value = "user",
+        allowSetters = true)
+    private List<Plant> plants = new ArrayList<>();
+
     /**
      * Default constructor used primarily by the JPA.
      */
@@ -85,16 +96,18 @@ public class User
      *
      * @param username     The username (String) of the user
      * @param password     The password (String) of the user
-     * @param primaryemail The primary email (String) of the user
+     * @param phoneNumber The primary email (String) of the user
      */
+
+
     public User(
         String username,
         String password,
-        String primaryemail)
+        String phoneNumber)
     {
-        setUsername(username);
-        setPassword(password);
-        this.primaryemail = primaryemail;
+        this.username = username;
+        this.password = password;
+        this.phoneNumber = phoneNumber;
     }
 
     /**
@@ -224,6 +237,26 @@ public class User
     public void setRoles(Set<UserRoles> roles)
     {
         this.roles = roles;
+    }
+
+    public List<Plant> getPlants()
+    {
+        return plants;
+    }
+
+    public void setPlants(List<Plant> plants)
+    {
+        this.plants = plants;
+    }
+
+    public String getPhoneNumber()
+    {
+        return phoneNumber;
+    }
+
+    public void setPhoneNumber(String phoneNumber)
+    {
+        this.phoneNumber = phoneNumber;
     }
 
     /**

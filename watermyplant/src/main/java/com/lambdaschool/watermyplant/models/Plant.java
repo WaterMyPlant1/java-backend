@@ -14,38 +14,27 @@ public class Plant extends Auditable
     private long plantId;
     private String nickname;
     private String species;
-    private Date h2oFrequency;
+    private String h2oFrequency;
 
     /**
      * The user to which this plant item is associated
      */
     @ManyToOne
     @JoinColumn(name = "userid", nullable = false)
-    @JsonIgnoreProperties(value = "plant", allowSetters = true)
+    @JsonIgnoreProperties(value = "plants", allowSetters = true)
     private User user;
 
     public Plant()
     {
     }
 
-    public Plant(
-        String nickname,
-        String species,
-        Date h2oFrequency)
-    {
-        this.nickname = nickname;
-        this.species = species;
-        this.h2oFrequency = h2oFrequency;
-    }
 
     public Plant(
-        long plantId,
         String nickname,
         String species,
-        Date h2oFrequency,
+        String h2oFrequency,
         User user)
     {
-        this.plantId = plantId;
         this.nickname = nickname;
         this.species = species;
         this.h2oFrequency = h2oFrequency;
@@ -82,12 +71,12 @@ public class Plant extends Auditable
         this.species = species;
     }
 
-    public Date getH2oFrequency()
+    public String getH2oFrequency()
     {
         return h2oFrequency;
     }
 
-    public void setH2oFrequency(Date h2oFrequency)
+    public void setH2oFrequency(String h2oFrequency)
     {
         this.h2oFrequency = h2oFrequency;
     }
