@@ -61,7 +61,6 @@ public class SecurityConfig
             .passwordEncoder(encoder());
     }
 
-
     /**
      * We will store our token in memory. This way when the application exists all access tokens are invalidated.
      *
