@@ -112,7 +112,7 @@
     </dependencies>
 
     <build>
-        <finalName>watermyplantTT7</finalName>
+        <finalName>watermyplant-tt7</finalName>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
