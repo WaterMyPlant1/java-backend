@@ -4,6 +4,7 @@ import { useHistory } from "react-router-dom";
 
 const GetUserInfo = (props) => {
   const [userData, setUserData] = useState({});
+  const [plants, setPlants] = useState([]);
   const history = useHistory();
 
   const logout = () => {
@@ -23,16 +24,31 @@ const GetUserInfo = (props) => {
 
   console.log(userData);
 
-  const getPlants = () => {
+  useEffect(() => {
     axiosWithAuth()
       .get(`/plants/${userData.userid}`)
       .then((res) => {
         console.log(res.data);
+        setPlants(res.data);
       })
       .catch((err) => {
         console.log(err);
       });
-  };
+  }, [userData.userid]);
+  console.log("plant", plants);
+
+  // const editPlant = () => {
+  //   plants.forEach((plant) => {
+  //     axiosWithAuth()
+  //       .patch(`plants/plant/${plant.plantId}`)
+  //       .then((res) => {
+  //         console.log(res);
+  //       })
+  //       .catch((err) => {
+  //         console.log(err);
+  //       });
+  //   });
+  // };
 
   return (
     <>
@@ -41,7 +57,6 @@ const GetUserInfo = (props) => {
         <h3> {userData.primaryemail} </h3>
         <br />
         <p>Congratulations! You are now a Back-end developer.</p>
-        <button onClick={getPlants}>getplants</button>
       </div>
       <br />
       <div className="logout">
@@ -49,6 +64,7 @@ const GetUserInfo = (props) => {
           {" "}
           Logout{" "}
         </button>
+        {/* <button onClick={editPlant}>edit plant</button> */}
       </div>
     </>
   );
