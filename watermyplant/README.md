@@ -1,4 +1,4 @@
-# Foundation / Scaffolding for Build Week
+# Foundation / Scaffolding
 
 ## Introduction
 

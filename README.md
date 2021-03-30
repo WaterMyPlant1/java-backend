@@ -80,8 +80,9 @@ The REST API for Water My Plant.
 
 ### Request
 
-`GET https://watermyplant-tt7.herokuapp.com/plants/`
+`GET https://watermyplant-tt7.herokuapp.com/plants/{userId}`
 
+`GET https://watermyplant-tt7.herokuapp.com/plants/4`
 ### Response
     res.data
     Array of plants:
