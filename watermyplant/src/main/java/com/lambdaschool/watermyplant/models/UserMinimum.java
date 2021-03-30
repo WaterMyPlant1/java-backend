@@ -24,6 +24,8 @@ public class UserMinimum
     @Email
     private String primaryemail;
 
+    private String phoneNumber;
+
     /**
      * Getter for the username
      *
@@ -83,5 +85,15 @@ public class UserMinimum
     public void setPrimaryemail(String primaryemail)
     {
         this.primaryemail = primaryemail;
+    }
+
+    public String getPhoneNumber()
+    {
+        return phoneNumber;
+    }
+
+    public void setPhoneNumber(String phoneNumber)
+    {
+        this.phoneNumber = phoneNumber;
     }
 }
