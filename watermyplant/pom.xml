@@ -41,7 +41,7 @@
             <artifactId>h2</artifactId>
             <!-- <scope>runtime</scope>-->
         </dependency>
-
+        <!--postgresql dependency-->
         <dependency>
             <groupId>org.postgresql</groupId>
             <artifactId>postgresql</artifactId>
@@ -112,8 +112,7 @@
     </dependencies>
 
     <build>
-        <finalName>shazeen-watermyplant</finalName>
-
+        <finalName>watermyplant</finalName>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
