@@ -26,8 +26,8 @@ public class PlantController
         @PathVariable long userId
     )
     {
-        List<Plant> p = plantService.findPlantByUserId(userId);
-        return new ResponseEntity<>(p,
+        List<Plant> plantList = plantService.findPlantByUserId(userId);
+        return new ResponseEntity<>(plantList,
             HttpStatus.OK);
     }
 }
