@@ -59,12 +59,37 @@ public class PlantServiceImpl implements PlantService
         Plant plant,
         long id)
     {
-        return null;
+        Plant currentPlant = plantRepository.findById(id)
+            .orElseThrow(() -> new ResourceNotFoundException("Plant " + id + " not found!"));
+
+        if(plant.getNickname() != null)
+        {
+            currentPlant.setNickname(plant.getNickname());
+        }
+
+        if(plant.getSpecies() != null)
+        {
+            currentPlant.setSpecies(plant.getSpecies());
+        }
+
+        if(plant.getH2oFrequency() != null)
+        {
+            currentPlant.setH2oFrequency(plant.getH2oFrequency());
+        }
+
+        return plantRepository.save(currentPlant);
     }
 
     @Override
     public void delete(long id)
     {
-
+        if(plantRepository.findById(id).isPresent())
+        {
+            plantRepository.deleteById(id);
+        }
+        else
+        {
+            throw new ResourceNotFoundException("Plant id " + id + " not found");
+        }
     }
 }
