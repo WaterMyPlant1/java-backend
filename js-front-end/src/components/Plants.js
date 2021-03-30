@@ -1,62 +1,47 @@
-import axios from "axios";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { axiosWithAuth } from "./axiosWithAuth";
 
 export default function Plants(props) {
-  const [plant, setPlant] = useState(props.plant);
-  console.log(JSON.stringify(plant));
-  const handleChange = (e) =>
-    setPlant({
-      ...plant,
-      [e.target.name]: e.target.value,
-    });
+  const [userData, setUserData] = useState({});
+  const [plants, setPlants] = useState([]);
 
-  const submit = (e) => {
-    e.preventDefault();
+  useEffect(() => {
     axiosWithAuth()
-      .patch(
-        `https://watermyplant-tt7.herokuapp.com/plants/plant/${plant.plantId}`,
-        plant
-      )
+      .get("/users/getuserinfo")
       .then((res) => {
-        console.log(res);
+        setUserData(res.data);
+      })
+      .catch((err) => {
+        debugger;
+      });
+  }, []);
+
+  console.log(userData);
+
+  useEffect(() => {
+    axiosWithAuth()
+      .get(`/plants/${userData.userid}`)
+      .then((res) => {
+        console.log(res.data);
+        setPlants(res.data);
       })
       .catch((err) => {
         console.log(err);
       });
-  };
+  }, [userData.userid]);
+  console.log("plant", plants);
 
   return (
     <div>
-      <form onSubmit={submit}>
-        <label htmlFor="nickname">nickName</label>
-        <input
-          type="text"
-          name="nickname"
-          id="nickname"
-          value={plant.nickname}
-          onChange={handleChange}
-        />
-
-        <label htmlFor="species">species</label>
-        <input
-          type="text"
-          name="species"
-          id="species"
-          value={plant.species}
-          onChange={handleChange}
-        />
-
-        <label htmlFor="h2oFrequency">h2oFrequency</label>
-        <input
-          type="text"
-          name="h2oFrequency"
-          id="h2oFrequency"
-          value={plant.h2oFrequency}
-          onChange={handleChange}
-        />
-        <button type="submit">submit</button>
-      </form>
+      {plants.map((plant) => {
+        return (
+          <div key={plant.plantId}>
+            <h1>{plant.nickname}</h1>
+            <p>{plant.species}</p>
+            <p>{plant.h2oFrequency}</p>
+          </div>
+        );
+      })}
     </div>
   );
 }

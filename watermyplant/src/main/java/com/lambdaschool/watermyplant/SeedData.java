@@ -98,7 +98,7 @@ public class SeedData
         u1.getPlants()
             .add(new Plant("Plant3", "Species3", "06/30/2002", u1));
         u1.getPlants()
-            .add(new Plant("Plant4", "Species2", "06/30/2002", u1));
+            .add(new Plant("Plant4", "Species4", "06/30/2002", u1));
         userService.save(u1);
 
         // data, user
