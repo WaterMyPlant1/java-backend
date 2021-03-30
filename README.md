@@ -66,6 +66,12 @@ The REST API for Water My Plant.
     token_type: "bearer", scope: "read write trust"
     }
 
+## Get User Info
+### Request
+
+`GET https://watermyplant-tt7.herokuapp.com/users/getuserinfo`
+
+    res.data
     {
         phoneNumber: "786-898-3348" (String)
         plants: [Object] (1) (Array)
@@ -75,6 +81,9 @@ The REST API for Water My Plant.
         userid: 4 (interger)
         username: "admin" (String)
     }
+
+### Response
+
 
 ## Get list of Plants By UserId
 

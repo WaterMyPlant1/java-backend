@@ -9,5 +9,4 @@ import java.util.List;
 public interface PlantRepository extends CrudRepository<Plant, Long>
 {
     List<Plant> findPlantByUser_userid(long userid);
-
 }
