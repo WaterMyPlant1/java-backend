@@ -71,6 +71,15 @@ The REST API for Water My Plant.
 
 `GET https://watermyplant-tt7.herokuapp.com/users/getuserinfo`
 
+    axiosWithAuth()
+      .get("/users/getuserinfo")
+      .then((res) => {
+        setUserData(res.data);
+      })
+      .catch((err) => {
+        debugger;
+      });
+
     res.data
     {
         phoneNumber: "786-898-3348" (String)
