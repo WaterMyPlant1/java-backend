@@ -28,6 +28,13 @@ public class PlantController
             HttpStatus.OK);
     }
 
+    @PatchMapping(value = "/plant/{plantId}")
+    public ResponseEntity<?> editPlantById(@PathVariable long plantId, @RequestBody Plant editPlant)
+    {
+        plantService.update(editPlant, plantId);
+        return new ResponseEntity<>(HttpStatus.OK);
+    }
+
     @DeleteMapping("/plant/{plantId}")
     public ResponseEntity<?> deletePlantById(@PathVariable long plantId)
     {
