@@ -80,6 +80,8 @@ The REST API for Water My Plant.
         debugger;
       });
 
+### Response
+
     res.data
     {
         phoneNumber: "786-898-3348" (String)
@@ -91,7 +93,6 @@ The REST API for Water My Plant.
         username: "admin" (String)
     }
 
-### Response
 
 
 ## Get list of Plants By UserId
@@ -112,3 +113,13 @@ The REST API for Water My Plant.
         user: {userid: 4, username: "admin", primaryemail: null, phoneNumber: "786-898-3348", useremails: [{useremailid: 6, useremail: "admin@email.local"}, {useremailid: 7, useremail: "admin@mymail.local"}], …}
     }
 
+### Response
+
+## Edit Plant by ID
+
+### Request
+
+`PATCH https://watermyplant-tt7.herokuapp.com/plants/plant/{plantId}`
+
+### Response
+    

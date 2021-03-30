@@ -28,7 +28,7 @@ public class PlantController
             HttpStatus.OK);
     }
 
-    @PatchMapping(value = "/plant/{plantId}")
+    @PatchMapping(value = "/plant/{plantId}", consumes = "application/json")
     public ResponseEntity<?> editPlantById(@PathVariable long plantId, @RequestBody Plant editPlant)
     {
         plantService.update(editPlant, plantId);

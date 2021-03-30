@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { axiosWithAuth } from "./axiosWithAuth";
 import { useHistory } from "react-router-dom";
+import Plants from "./Plants";
 
 const GetUserInfo = (props) => {
   const [userData, setUserData] = useState({});
@@ -37,19 +38,6 @@ const GetUserInfo = (props) => {
   }, [userData.userid]);
   console.log("plant", plants);
 
-  // const editPlant = () => {
-  //   plants.forEach((plant) => {
-  //     axiosWithAuth()
-  //       .patch(`plants/plant/${plant.plantId}`)
-  //       .then((res) => {
-  //         console.log(res);
-  //       })
-  //       .catch((err) => {
-  //         console.log(err);
-  //       });
-  //   });
-  // };
-
   return (
     <>
       <div>
@@ -64,8 +52,10 @@ const GetUserInfo = (props) => {
           {" "}
           Logout{" "}
         </button>
-        {/* <button onClick={editPlant}>edit plant</button> */}
       </div>
+      {plants.map((plant) => {
+        return <Plants plant={plant} key={plant.plantId} />;
+      })}
     </>
   );
 };

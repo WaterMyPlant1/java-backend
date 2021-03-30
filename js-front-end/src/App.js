@@ -4,14 +4,16 @@ import Login from "./components/Login";
 import GetUserInfo from "./components/UserInfo";
 import ProtectedRoute from "./components/ProtectedRoute";
 import "./App.css";
+import SignUp from "./components/SignUp";
 
 function App() {
-	return (
-		<div className="App">
-			<Route exact path="/" component={Login} />
-			<ProtectedRoute exact path="/userinfo" component={GetUserInfo} />
-		</div>
-	);
+  return (
+    <div className="App">
+      <SignUp />
+      <Route exact path="/" component={Login} />
+      <ProtectedRoute exact path="/userinfo" component={GetUserInfo} />
+    </div>
+  );
 }
 
 export default App;
