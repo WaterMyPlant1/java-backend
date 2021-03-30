@@ -32,6 +32,6 @@ public class PlantController
     public ResponseEntity<?> deletePlantById(@PathVariable long plantId)
     {
         plantService.delete(plantId);
-        return new ResponseEntity<>()
+        return new ResponseEntity<>(HttpStatus.OK);
     }
 }
