@@ -1,9 +1,10 @@
 import axios from "axios";
 import React, { useState } from "react";
+import { axiosWithAuth } from "./axiosWithAuth";
 
 export default function Plants(props) {
   const [plant, setPlant] = useState(props.plant);
-  console.log(plant);
+  console.log(JSON.stringify(plant));
   const handleChange = (e) =>
     setPlant({
       ...plant,
@@ -11,7 +12,18 @@ export default function Plants(props) {
     });
 
   const submit = (e) => {
-    axios.patch(``);
+    e.preventDefault();
+    axiosWithAuth()
+      .patch(
+        `https://watermyplant-tt7.herokuapp.com/plants/plant/${plant.plantId}`,
+        plant
+      )
+      .then((res) => {
+        console.log(res);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   };
 
   return (

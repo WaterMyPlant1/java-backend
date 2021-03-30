@@ -42,14 +42,6 @@ public class User
     @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     private String password;
 
-    /**
-     * Primary email account of user. Could be used as the userid. Cannot be null and must be unique.
-     */
-    @Column(nullable = true,
-        unique = true)
-    @Email
-    private String primaryemail;
-
     @Column(nullable = false,
     unique = true)
     private String phoneNumber;
@@ -150,25 +142,6 @@ public class User
         this.username = username.toLowerCase();
     }
 
-    /**
-     * getter for primary email
-     *
-     * @return the primary email (String) for the user converted to lowercase
-     */
-    public String getPrimaryemail()
-    {
-        return primaryemail;
-    }
-
-    /**
-     * setter for primary email
-     *
-     * @param primaryemail the new primary email (String) for the user converted to lowercase
-     */
-    public void setPrimaryemail(String primaryemail)
-    {
-        this.primaryemail = primaryemail.toLowerCase();
-    }
 
     /**
      * Getter for the password

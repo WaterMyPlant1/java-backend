@@ -158,12 +158,6 @@ public class UserServiceImpl
                 currentUser.setPhoneNumber(user.getPhoneNumber());
             }
 
-            if (user.getPrimaryemail() != null)
-            {
-                currentUser.setPrimaryemail(user.getPrimaryemail()
-                    .toLowerCase());
-            }
-
             if (user.getRoles()
                 .size() > 0)
             {

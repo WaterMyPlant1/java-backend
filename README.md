@@ -48,7 +48,14 @@ The REST API for Water My Plant.
 
 `POST https://watermyplant-tt7.herokuapp.com/createnewuser`
 
-    Automatically logs in user - can route directly to protected route
+    Can set token to local storage from this end point and route to protected routes
+
+### Response
+    {
+        "access_token": "a4e391e6-f88e-4e9f-8948-53290b08a2f7",
+        "token_type": "bearer",
+        "scope": "read trust write"
+    }
 
 ## Login
 
@@ -122,4 +129,44 @@ The REST API for Water My Plant.
 `PATCH https://watermyplant-tt7.herokuapp.com/plants/plant/{plantId}`
 
 ### Response
-    
+    {
+        "plantId": 5,
+        "nickname": "Plant1",
+        "species": "Species377",
+        "h2oFrequency": "06/30/2002",
+        "user": {
+            "userid": 4,
+            "username": "admin",
+            "phoneNumber": "786-898-3348",
+            "useremails": [
+                {
+                    "useremailid": 6,
+                    "useremail": "admin@email.local"
+                },
+                {
+                    "useremailid": 7,
+                    "useremail": "admin@mymail.local"
+                }
+            ],
+            "roles": [
+                {
+                    "role": {
+                        "roleid": 1,
+                        "name": "ADMIN"
+                    }
+                },
+                {
+                    "role": {
+                        "roleid": 2,
+                        "name": "USER"
+                    }
+                },
+                {
+                    "role": {
+                        "roleid": 3,
+                        "name": "DATA"
+                    }
+                }
+            ]
+        }
+    }

@@ -32,7 +32,7 @@ public class PlantController
     public ResponseEntity<?> editPlantById(@PathVariable long plantId, @RequestBody Plant editPlant)
     {
         plantService.update(editPlant, plantId);
-        return new ResponseEntity<>(HttpStatus.OK);
+        return new ResponseEntity<>(editPlant,HttpStatus.OK);
     }
 
     @DeleteMapping("/plant/{plantId}")
