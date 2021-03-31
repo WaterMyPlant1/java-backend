@@ -92,13 +92,13 @@ public class SeedData
                 "admin@mymail.local"));
         //saving plants to the user
         u1.getPlants()
-            .add(new Plant("Plant1", "Species1", "06/30/2002", u1));
+            .add(new Plant("Plant1", "Species1", 3, u1));
         u1.getPlants()
-            .add(new Plant("Plant2", "Species2", "06/30/2004", u1));
+            .add(new Plant("Plant2", "Species2", 4, u1));
         u1.getPlants()
-            .add(new Plant("Plant3", "Species3", "06/30/2002", u1));
+            .add(new Plant("Plant3", "Species3", 5, u1));
         u1.getPlants()
-            .add(new Plant("Plant4", "Species4", "06/30/2002", u1));
+            .add(new Plant("Plant4", "Species4", 6, u1));
         userService.save(u1);
 
         // data, user

@@ -22,7 +22,7 @@ public class Plant extends Auditable
     @Column(unique = false)
     private String species;
 
-    private String h2oFrequency;
+    private Integer h2oFrequency;
 
     /**
      * The user to which this plant item is associated
@@ -39,7 +39,7 @@ public class Plant extends Auditable
     public Plant(
         String nickname,
         String species,
-        String h2oFrequency,
+        Integer h2oFrequency,
         User user)
     {
         this.nickname = nickname;
@@ -78,12 +78,12 @@ public class Plant extends Auditable
         this.species = species;
     }
 
-    public String getH2oFrequency()
+    public Integer getH2oFrequency()
     {
         return h2oFrequency;
     }
 
-    public void setH2oFrequency(String h2oFrequency)
+    public void setH2oFrequency(Integer h2oFrequency)
     {
         this.h2oFrequency = h2oFrequency;
     }
