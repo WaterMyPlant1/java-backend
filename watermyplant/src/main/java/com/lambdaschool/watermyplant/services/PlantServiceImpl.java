@@ -48,12 +48,13 @@ public class PlantServiceImpl implements PlantService
         newPlant.setH2oFrequency(plant.getH2oFrequency());
 
         User newUser = userRepository.findById(plant.getUser().getUserid())
-            .orElseThrow();
+            .orElseThrow(() -> new ResourceNotFoundException("User id " + plant.getUser().getUserid() + " not found"));
         newPlant.setUser(newUser);
 
         return plantRepository.save(newPlant);
     }
 
+    @Transactional
     @Override
     public Plant update(
         Plant plant,
@@ -80,6 +81,7 @@ public class PlantServiceImpl implements PlantService
         return plantRepository.save(currentPlant);
     }
 
+    @Transactional
     @Override
     public void delete(long id)
     {

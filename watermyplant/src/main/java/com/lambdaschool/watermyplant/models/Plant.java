@@ -3,6 +3,7 @@ package com.lambdaschool.watermyplant.models;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 import java.util.Date;
 
 @Entity
@@ -12,8 +13,15 @@ public class Plant extends Auditable
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long plantId;
+
+    @NotNull
+    @Column(unique = true)
     private String nickname;
+
+    @NotNull
+    @Column(unique = true)
     private String species;
+
     private String h2oFrequency;
 
     /**
@@ -27,7 +35,6 @@ public class Plant extends Auditable
     public Plant()
     {
     }
-
 
     public Plant(
         String nickname,
