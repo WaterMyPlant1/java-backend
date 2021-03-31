@@ -1,11 +1,14 @@
 package com.lambdaschool.watermyplant.controllers;
 
 import com.lambdaschool.watermyplant.models.Plant;
+import com.lambdaschool.watermyplant.models.User;
 import com.lambdaschool.watermyplant.services.PlantService;
+import com.lambdaschool.watermyplant.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
@@ -21,6 +24,9 @@ public class PlantController
 
     @Autowired
     PlantService plantService;
+
+    @Autowired
+    UserService userService;
 
 //    get list of plants by id
     @GetMapping(value = "/{userId}",
@@ -39,6 +45,9 @@ public class PlantController
     public ResponseEntity<?> createNewPlant(@Valid @RequestBody Plant newplant) throws URISyntaxException
     {
         newplant.setPlantId(0);
+        String username = SecurityContextHolder.getContext().getAuthentication().getName();
+        User currentUser = userService.findByName(username);
+        newplant.setUser(currentUser);
         newplant = plantService.save(newplant);
 
         // set the location header for the newly created resource
@@ -49,7 +58,7 @@ public class PlantController
             .toUri();
         responseHeaders.setLocation(newUserURI);
 
-        return new ResponseEntity<>(null, responseHeaders,
+        return new ResponseEntity<>(newplant, responseHeaders,
             HttpStatus.OK);
     }
 
