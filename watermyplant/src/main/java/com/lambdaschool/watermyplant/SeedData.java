@@ -120,6 +120,15 @@ public class SeedData
         u2.getUseremails()
             .add(new Useremail(u2,
                 "bunny@email.local"));
+        //saving plants to the user
+        u2.getPlants()
+            .add(new Plant("Plant1", "Species1", 3, u2));
+        u2.getPlants()
+            .add(new Plant("Plant2", "Species2", 4, u2));
+        u2.getPlants()
+            .add(new Plant("Plant3", "Species3", 5, u2));
+        u2.getPlants()
+            .add(new Plant("Plant4", "Species4", 6, u2));
         userService.save(u2);
 
         // user

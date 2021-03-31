@@ -15,7 +15,7 @@ public class Plant extends Auditable
     private long plantId;
 
     @NotNull
-    @Column(unique = true)
+    @Column(unique = false)
     private String nickname;
 
     @NotNull
