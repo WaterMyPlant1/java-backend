@@ -49,7 +49,7 @@ public class PlantController
             .toUri();
         responseHeaders.setLocation(newUserURI);
 
-        return new ResponseEntity<>(newplant, responseHeaders,
+        return new ResponseEntity<>(null, responseHeaders,
             HttpStatus.OK);
     }
 
