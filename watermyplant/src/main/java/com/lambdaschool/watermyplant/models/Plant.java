@@ -19,7 +19,7 @@ public class Plant extends Auditable
     private String nickname;
 
     @NotNull
-    @Column(unique = true)
+    @Column(unique = false)
     private String species;
 
     private String h2oFrequency;

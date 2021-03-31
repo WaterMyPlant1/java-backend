@@ -120,7 +120,7 @@ The REST API for Water My Plant.
         user: {userid: 4, username: "admin", primaryemail: null, phoneNumber: "786-898-3348", useremails: [{useremailid: 6, useremail: "admin@email.local"}, {useremailid: 7, useremail: "admin@mymail.local"}], …}
     }
 
-## Create New Plant (not working yet!)
+## Create New Plant
 
 ### Request
 
@@ -128,7 +128,47 @@ The REST API for Water My Plant.
 
 ### Response
     
-    return new plant
+    {
+        "plantId": 29,
+        "nickname": "plant5050",
+        "species": "Species5050",
+        "h2oFrequency": "06/30/2002",
+        "user": {
+            "userid": 4,
+            "username": "admin",
+            "phoneNumber": "786-898-3348",
+            "useremails": [
+                {
+                    "useremailid": 9,
+                    "useremail": "admin@email.local"
+                },
+                {
+                    "useremailid": 10,
+                    "useremail": "admin@mymail.local"
+                }
+            ],
+            "roles": [
+                {
+                    "role": {
+                        "roleid": 1,
+                        "name": "ADMIN"
+                    }
+                },
+                {
+                    "role": {
+                        "roleid": 2,
+                        "name": "USER"
+                    }
+                },
+                {
+                    "role": {
+                        "roleid": 3,
+                        "name": "DATA"
+                    }
+                }
+            ]
+        }
+    }
 
 ## Edit Plant by ID
 
