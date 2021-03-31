@@ -63,7 +63,7 @@ public class ResourceServerConfig
                 "/users/**")
             .hasAnyRole("ADMIN")
             .antMatchers(HttpMethod.PATCH, "/users/**")
-            .hasAnyRole("ADMIN")
+            .hasAnyRole("ADMIN", "USER")
             .antMatchers("/users/**",
                 "/useremails/**",
                 "/oauth/revoke-token",
