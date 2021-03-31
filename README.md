@@ -91,13 +91,65 @@ The REST API for Water My Plant.
 
     res.data
     {
-        phoneNumber: "786-898-3348" (String)
-        plants: [Object] (1) (Array)
-        primaryemail: null
-        roles: [{role: {roleid: 1, name: "ADMIN"}}, {role: {roleid: 2, name: "USER"}}, {role: {roleid: 3, name: "DATA"}}] (3)
-        useremails: [{useremailid: 6, useremail: "admin@email.local"}, {useremailid: 7, useremail: "admin@mymail.local"}] (2)
-        userid: 4 (interger)
-        username: "admin" (String)
+        "userid": 4,
+        "username": "admin",
+        "phoneNumber": "786-898-3348",
+        "useremails": [
+            {
+                "useremailid": 9,
+                "useremail": "admin@email.local"
+            },
+            {
+                "useremailid": 10,
+                "useremail": "admin@mymail.local"
+            }
+        ],
+        "roles": [
+            {
+                "role": {
+                    "roleid": 1,
+                    "name": "ADMIN"
+                }
+            },
+            {
+                "role": {
+                    "roleid": 2,
+                    "name": "USER"
+                }
+            },
+            {
+                "role": {
+                    "roleid": 3,
+                    "name": "DATA"
+                }
+            }
+        ],
+        "plants": [
+            {
+                "plantId": 5,
+                "nickname": "Plant1",
+                "species": "Species1",
+                "h2oFrequency": 3
+            },
+            {
+                "plantId": 6,
+                "nickname": "Plant2",
+                "species": "Species2",
+                "h2oFrequency": 4
+            },
+            {
+                "plantId": 7,
+                "nickname": "Plant3",
+                "species": "Species3",
+                "h2oFrequency": 5
+            },
+            {
+                "plantId": 8,
+                "nickname": "Plant4",
+                "species": "Species4",
+                "h2oFrequency": 6
+            }
+        ]
     }
 
 
@@ -112,13 +164,91 @@ The REST API for Water My Plant.
 ### Response
     res.data
     Array of plants:
-    {
-        h2oFrequency: 8 (Integer)
-        nickname: "Plant1" (String)
-        plantId: 5
-        species: "Species1" (String)
-        user: {userid: 4, username: "admin", primaryemail: null, phoneNumber: "786-898-3348", useremails: [{useremailid: 6, useremail: "admin@email.local"}, {useremailid: 7, useremail: "admin@mymail.local"}], …}
-    }
+    [
+        {
+            "plantId": 5,
+            "nickname": "Plant1",
+            "species": "Species1",
+            "h2oFrequency": 3,
+            "user": {
+                "userid": 4,
+                "username": "admin",
+                "phoneNumber": "786-898-3348",
+                "useremails": [
+                    {
+                        "useremailid": 9,
+                        "useremail": "admin@email.local"
+                    },
+                    {
+                        "useremailid": 10,
+                        "useremail": "admin@mymail.local"
+                    }
+                ],
+                "roles": [
+                    {
+                        "role": {
+                            "roleid": 1,
+                            "name": "ADMIN"
+                        }
+                    },
+                    {
+                        "role": {
+                            "roleid": 2,
+                            "name": "USER"
+                        }
+                    },
+                    {
+                        "role": {
+                            "roleid": 3,
+                            "name": "DATA"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "plantId": 6,
+            "nickname": "Plant2",
+            "species": "Species2",
+            "h2oFrequency": 4,
+            "user": {
+                "userid": 4,
+                "username": "admin",
+                "phoneNumber": "786-898-3348",
+                "useremails": [
+                    {
+                        "useremailid": 9,
+                        "useremail": "admin@email.local"
+                    },
+                    {
+                        "useremailid": 10,
+                        "useremail": "admin@mymail.local"
+                    }
+                ],
+                "roles": [
+                    {
+                        "role": {
+                            "roleid": 1,
+                            "name": "ADMIN"
+                        }
+                    },
+                    {
+                        "role": {
+                            "roleid": 2,
+                            "name": "USER"
+                        }
+                    },
+                    {
+                        "role": {
+                            "roleid": 3,
+                            "name": "DATA"
+                        }
+                    }
+                ]
+            }
+        },
+        ....
+    ]
 
 ## Create New Plant
 
