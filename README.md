@@ -113,7 +113,7 @@ The REST API for Water My Plant.
     res.data
     Array of plants:
     {
-        h2oFrequency: "06/30/2002" (String)
+        h2oFrequency: 8 (Integer)
         nickname: "Plant1" (String)
         plantId: 5
         species: "Species1" (String)
@@ -129,10 +129,10 @@ The REST API for Water My Plant.
 ### Response
     
     {
-        "plantId": 29,
-        "nickname": "plant5050",
-        "species": "Species5050",
-        "h2oFrequency": "06/30/2002",
+        "plantId": 31,
+        "nickname": "plant50505",
+        "species": "Species50505",
+        "h2oFrequency": 6,
         "user": {
             "userid": 4,
             "username": "admin",
@@ -181,7 +181,7 @@ The REST API for Water My Plant.
         "plantId": 5,
         "nickname": "Plant1",
         "species": "Species377",
-        "h2oFrequency": "06/30/2002",
+        "h2oFrequency": 6,
         "user": {
             "userid": 4,
             "username": "admin",
