@@ -34,6 +34,7 @@ public class PlantController
             HttpStatus.OK);
     }
 
+//    creating new plant
     @PostMapping(value = "/newplant", consumes = "application/json")
     public ResponseEntity<?> createNewPlant(@Valid @RequestBody Plant newplant) throws URISyntaxException
     {
