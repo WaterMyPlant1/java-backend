@@ -120,6 +120,16 @@ The REST API for Water My Plant.
         user: {userid: 4, username: "admin", primaryemail: null, phoneNumber: "786-898-3348", useremails: [{useremailid: 6, useremail: "admin@email.local"}, {useremailid: 7, useremail: "admin@mymail.local"}], …}
     }
 
+## Create New Plant (not working yet!)
+
+### Request
+
+`POST https://watermyplant-tt7.herokuapp.com/plants/newplant`
+
+### Response
+    
+    return new plant
+
 ## Edit Plant by ID
 
 ### Request
