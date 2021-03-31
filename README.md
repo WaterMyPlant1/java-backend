@@ -120,8 +120,6 @@ The REST API for Water My Plant.
         user: {userid: 4, username: "admin", primaryemail: null, phoneNumber: "786-898-3348", useremails: [{useremailid: 6, useremail: "admin@email.local"}, {useremailid: 7, useremail: "admin@mymail.local"}], …}
     }
 
-### Response
-
 ## Edit Plant by ID
 
 ### Request
@@ -170,3 +168,13 @@ The REST API for Water My Plant.
             ]
         }
     }
+
+## Delete Plant By ID
+
+### Request
+
+`DELETE https://watermyplant-tt7.herokuapp.com/plants/plant/{plantId}`
+
+### Response
+    staus OK
+
