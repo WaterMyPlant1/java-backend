@@ -152,7 +152,15 @@ The REST API for Water My Plant.
         ]
     }
 
+## Edit User Username and Password
 
+### Request
+
+`PATCH https://watermyplant-tt7.herokuapp.com/users/user/{userid}`
+
+### Response
+
+    HttpStatus.OK
 
 ## Get list of Plants By UserId
 
@@ -161,6 +169,7 @@ The REST API for Water My Plant.
 `GET https://watermyplant-tt7.herokuapp.com/plants/{userId}`
 
 `GET https://watermyplant-tt7.herokuapp.com/plants/4`
+
 ### Response
     res.data
     Array of plants:
