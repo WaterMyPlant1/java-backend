@@ -26,6 +26,8 @@ public class Plant extends Auditable
 
     private String img;
 
+    private long baseDate;
+
     /**
      * The user to which this plant item is associated
      */
@@ -44,12 +46,14 @@ public class Plant extends Auditable
         String species,
         Integer h2oFrequency,
         String img,
+        long baseDate,
         User user)
     {
         this.nickname = nickname;
         this.species = species;
         this.h2oFrequency = h2oFrequency;
         this.img = img;
+        this.baseDate = baseDate;
         this.user = user;
     }
 
@@ -99,6 +103,16 @@ public class Plant extends Auditable
 
     public void setImg(String img) {
         this.img = img;
+    }
+
+    public long getBaseDate()
+    {
+        return baseDate;
+    }
+
+    public void setBaseDate(long baseDate)
+    {
+        this.baseDate = baseDate;
     }
 
     public User getUser()

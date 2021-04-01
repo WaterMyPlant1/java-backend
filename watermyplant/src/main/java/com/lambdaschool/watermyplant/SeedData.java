@@ -92,13 +92,13 @@ public class SeedData
                 "admin@mymail.local"));
         //saving plants to the user
         u1.getPlants()
-            .add(new Plant("Plant1", "Species1", 3,"https://images.unsplash.com/photo-1484509025075-64c8133991bf?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NDR8fHBsYW50c3xlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60", u1));
+            .add(new Plant("Plant1", "Species1", 3,"https://images.unsplash.com/photo-1484509025075-64c8133991bf?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NDR8fHBsYW50c3xlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",1233445, u1));
         u1.getPlants()
-            .add(new Plant("Plant2", "Species2", 4,"https://images.unsplash.com/photo-1484509025075-64c8133991bf?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NDR8fHBsYW50c3xlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60", u1));
+            .add(new Plant("Plant2", "Species2", 4,"https://images.unsplash.com/photo-1484509025075-64c8133991bf?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NDR8fHBsYW50c3xlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60", 1233445, u1));
         u1.getPlants()
-            .add(new Plant("Plant3", "Species3", 5,"https://images.unsplash.com/photo-1484509025075-64c8133991bf?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NDR8fHBsYW50c3xlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60", u1));
+            .add(new Plant("Plant3", "Species3", 5,"https://images.unsplash.com/photo-1484509025075-64c8133991bf?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NDR8fHBsYW50c3xlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",1233445, u1));
         u1.getPlants()
-            .add(new Plant("Plant4", "Species4", 6,"https://images.unsplash.com/photo-1484509025075-64c8133991bf?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NDR8fHBsYW50c3xlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",u1));
+            .add(new Plant("Plant4", "Species4", 6,"https://images.unsplash.com/photo-1484509025075-64c8133991bf?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NDR8fHBsYW50c3xlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",1233445,u1));
         userService.save(u1);
 
         // data, user
@@ -122,13 +122,13 @@ public class SeedData
                 "bunny@email.local"));
         //saving plants to the user
         u2.getPlants()
-            .add(new Plant("Plant1", "Species1", 3,"https://images.unsplash.com/photo-1484509025075-64c8133991bf?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NDR8fHBsYW50c3xlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60", u2));
+            .add(new Plant("Plant1", "Species1", 3,"https://images.unsplash.com/photo-1484509025075-64c8133991bf?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NDR8fHBsYW50c3xlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",1233445, u2));
         u2.getPlants()
-            .add(new Plant("Plant2", "Species2", 4,"https://images.unsplash.com/photo-1484509025075-64c8133991bf?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NDR8fHBsYW50c3xlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60", u2));
+            .add(new Plant("Plant2", "Species2", 4,"https://images.unsplash.com/photo-1484509025075-64c8133991bf?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NDR8fHBsYW50c3xlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",1233445, u2));
         u2.getPlants()
-            .add(new Plant("Plant3", "Species3", 5,"https://images.unsplash.com/photo-1484509025075-64c8133991bf?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NDR8fHBsYW50c3xlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60", u2));
+            .add(new Plant("Plant3", "Species3", 5,"https://images.unsplash.com/photo-1484509025075-64c8133991bf?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NDR8fHBsYW50c3xlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",1233445, u2));
         u2.getPlants()
-            .add(new Plant("Plant4", "Species4", 6,"https://images.unsplash.com/photo-1484509025075-64c8133991bf?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NDR8fHBsYW50c3xlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60", u2));
+            .add(new Plant("Plant4", "Species4", 6,"https://images.unsplash.com/photo-1484509025075-64c8133991bf?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NDR8fHBsYW50c3xlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",1233445, u2));
         userService.save(u2);
 
         // user

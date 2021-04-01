@@ -125,7 +125,7 @@ public class UserServiceImpl
         for(Plant p : user.getPlants())
         {
             newUser.getPlants()
-                .add(new Plant(p.getNickname(), p.getSpecies(), p.getH2oFrequency(), p.getImg(), newUser));
+                .add(new Plant(p.getNickname(), p.getSpecies(), p.getH2oFrequency(), p.getImg(), p.getBaseDate(), newUser));
         }
 
         return userrepos.save(newUser);

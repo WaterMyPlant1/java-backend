@@ -131,6 +131,7 @@ The REST API for Water My Plant.
                     "species": "Species1",
                     "h2oFrequency": 3,
                     "img": "https://images.unsplash.com/photo-1484509025075-64c8133991bf?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NDR8fHBsYW50c3xlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                    "baseDate": 0,
                 },
                 {
                     "plantId": 6,
@@ -138,6 +139,7 @@ The REST API for Water My Plant.
                     "species": "Species2",
                     "h2oFrequency": 4,
                     "img": "https://images.unsplash.com/photo-1484509025075-64c8133991bf?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NDR8fHBsYW50c3xlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                    "baseDate": 0,
                 },
                 {
                     "plantId": 7,
@@ -145,6 +147,7 @@ The REST API for Water My Plant.
                     "species": "Species3",
                     "h2oFrequency": 5,
                     "img": "https://images.unsplash.com/photo-1484509025075-64c8133991bf?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NDR8fHBsYW50c3xlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                    "baseDate": 0,
                 },
                 {
                     "plantId": 8,
@@ -152,6 +155,7 @@ The REST API for Water My Plant.
                     "species": "Species4",
                     "h2oFrequency": 6,
                     "img": "https://images.unsplash.com/photo-1484509025075-64c8133991bf?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NDR8fHBsYW50c3xlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                    "baseDate": 0,                
                 }
         ]
     }
@@ -184,6 +188,7 @@ The REST API for Water My Plant.
             "species": "Species1",
             "h2oFrequency": 3,
             "img": "https://images.unsplash.com/photo-1484509025075-64c8133991bf?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NDR8fHBsYW50c3xlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+            "baseDate": 0,
             "user": {
                 "userid": 4,
                 "username": "admin",
@@ -237,6 +242,7 @@ The REST API for Water My Plant.
         "species": "Species50505",
         "h2oFrequency": 6,
         "img": "https://images.unsplash.com/photo-1505066211281-ed125c006f4c?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mzl8fHBsYW50c3xlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+        "baseDate": 0,
         "user": {
             "userid": 4,
             "username": "admin",
@@ -287,6 +293,7 @@ The REST API for Water My Plant.
         "species": "Species377",
         "h2oFrequency": 6,
         "img": "https://images.unsplash.com/photo-1488353816557-87cd574cea04?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NjR8fHBsYW50c3xlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+        "baseDate": 0,
         "user": {
             "userid": 4,
             "username": "admin",
