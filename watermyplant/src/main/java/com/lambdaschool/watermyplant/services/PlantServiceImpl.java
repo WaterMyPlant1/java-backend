@@ -46,6 +46,7 @@ public class PlantServiceImpl implements PlantService
         newPlant.setNickname(plant.getNickname());
         newPlant.setSpecies(plant.getSpecies());
         newPlant.setH2oFrequency(plant.getH2oFrequency());
+        newPlant.setImg(plant.getImg());
 
         User newUser = userRepository.findById(plant.getUser().getUserid())
             .orElseThrow(() -> new ResourceNotFoundException("User id " + plant.getUser().getUserid() + " not found"));
@@ -76,6 +77,11 @@ public class PlantServiceImpl implements PlantService
         if(plant.getH2oFrequency() != null)
         {
             currentPlant.setH2oFrequency(plant.getH2oFrequency());
+        }
+
+        if(plant.getImg() != null)
+        {
+            currentPlant.setImg(plant.getImg());
         }
 
         return plantRepository.save(currentPlant);

@@ -24,6 +24,8 @@ public class Plant extends Auditable
 
     private Integer h2oFrequency;
 
+    private String img;
+
     /**
      * The user to which this plant item is associated
      */
@@ -36,15 +38,18 @@ public class Plant extends Auditable
     {
     }
 
+
     public Plant(
         String nickname,
         String species,
         Integer h2oFrequency,
+        String img,
         User user)
     {
         this.nickname = nickname;
         this.species = species;
         this.h2oFrequency = h2oFrequency;
+        this.img = img;
         this.user = user;
     }
 
@@ -86,6 +91,14 @@ public class Plant extends Auditable
     public void setH2oFrequency(Integer h2oFrequency)
     {
         this.h2oFrequency = h2oFrequency;
+    }
+
+    public String getImg() {
+        return img;
+    }
+
+    public void setImg(String img) {
+        this.img = img;
     }
 
     public User getUser()
